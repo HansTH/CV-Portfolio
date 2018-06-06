@@ -1,0 +1,249 @@
+{
+    "work" : [
+              {
+              "workDetails" : [
+                               {
+                               "jobTitle" : "Lean Technician",
+                               "detail" : "In samenwerking met teamleader Lean, het uitwerken en implementeren van verbeterpunten volgens de Lean filosofie.",
+                               "year" : 2015
+                               },
+                               {
+                               "jobTitle" : "Proces Operator",
+                               "detail" : "Produceren van membranen voor het filtreren van afvalwater en andere zuiveringsprocessen.",
+                               "year" : 2011
+                               }
+                               ],
+              "year" : 2011,
+              "companyName" : "Pentair",
+              "companyCity" : "Enschede"
+              },
+              {
+              "workDetails" : [
+                               {
+                               "jobTitle" : "Orderbegeleider",
+                               "detail" : "Het plannen en begeleiden van drukwerk dat wordt uitbesteedt aan andere drukkerijen.",
+                               "year" : 2010
+                               },
+                               {
+                               "jobTitle" : "Voorman",
+                               "detail" : "Verantwoordelijk voor het aansturen van gehele productie proces in de drukkerij.",
+                               "year" : 2008
+                               },
+                               {
+                               "jobTitle" : "Offsetdrukker",
+                               "detail" : "Drukken van CD en DVD verpakkingen aan een Roland 706 UV met lakunit.",
+                               "year" : 2005
+                               }
+                               ],
+              "year" : 2005,
+              "companyName" : "AGI v\/d Steeg",
+              "companyCity" : "Enschede"
+              },
+              {
+              "workDetails" : [
+                               {
+                               "jobTitle" : "MatchMove Artist",
+                               "detail" : "Prince Caspian, 2008. Het vastleggen van de camera bewegingen in live action shots en deze koppelen aan de bewegingen van de 3D computer animaties.",
+                               "year" : 2007
+                               }
+                               ],
+              "year" : 2007,
+              "companyName" : "Escape Studios",
+              "companyCity" : "London"
+              },
+              {
+              "workDetails" : [
+                               {
+                               "jobTitle" : "Offsetdrukker",
+                               "detail" : "Drukkerij Linde\nDenekamp",
+                               "year" : 2004
+                               },
+                               {
+                               "jobTitle" : "Offsetdrukker",
+                               "detail" : "Drukkerij vd Schaaf\nEnschede",
+                               "year" : 1999
+                               },
+                               {
+                               "jobTitle" : "Offsetdrukker",
+                               "detail" : "Drukkerij Veltmann\nEnschede",
+                               "year" : 1998
+                               },
+                               {
+                               "jobTitle" : "Offsetdrukker",
+                               "detail" : "Drukkerij Schutte & Stroop\nHengelo",
+                               "year" : 1993
+                               },
+                               {
+                               "jobTitle" : "Leerling offsetdrukker",
+                               "detail" : "DrukkerijSchutte & Stroop\nHengelo",
+                               "year" : 1990
+                               }
+                               ],
+              "year" : 1990,
+              "companyName" : "Diverse drukkerij",
+              "companyCity" : "Twente"
+              }
+              ],
+    "skill" : [
+               {
+               "skillColor" : "#FF8C42FF",
+               "skillTitle" : "Swift",
+               "skillLevel" : 60
+               },
+               {
+               "skillColor" : "#6699CCFF",
+               "skillTitle" : "Xcode",
+               "skillLevel" : 70
+               },
+               {
+               "skillColor" : "#FFF275FF",
+               "skillTitle" : "HTML5",
+               "skillLevel" : 30
+               },
+               {
+               "skillColor" : "#A23E48FF",
+               "skillTitle" : "CSS3",
+               "skillLevel" : 30
+               },
+               {
+               "skillColor" : "#FF3C38FF",
+               "skillTitle" : "JavaScript",
+               "skillLevel" : 30
+               },
+               {
+               "skillColor" : "#1A535CFF",
+               "skillTitle" : "Sketch",
+               "skillLevel" : 60
+               },
+               {
+               "skillColor" : "#FF6B6BFF",
+               "skillTitle" : "GIT",
+               "skillLevel" : 30
+               },
+               {
+               "skillColor" : "#4ECDC4FF",
+               "skillTitle" : "3D",
+               "skillLevel" : 55
+               },
+               {
+               "skillColor" : "#00A6EDFF",
+               "skillTitle" : "Nederlands",
+               "skillLevel" : 80
+               },
+               {
+               "skillColor" : "#7FB800FF",
+               "skillTitle" : "Engels",
+               "skillLevel" : 60
+               }
+               ],
+    "education" : [
+                   {
+                   "educationSchool" : "Zelfstudie",
+                   "educationTitle" : "Eigen portfolio bouwen",
+                   "year" : 2017,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "De volgede apps gebouwd, Spilt Amount, CV, Lekker Delden. Een eigen website om mijn portfolio te laten zien."
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "iOS Academy",
+                   "educationTitle" : "Apps bouwen met Xcode",
+                   "year" : 2016,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "Online curcus. Hoe gebruik je Xcode en UIKit om apps te maken."
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "iOS Academy",
+                   "educationTitle" : "Programmeren met Swift",
+                   "year" : 2016,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "Online cursus. De basis over programmeren met Swift."
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "iOS Academy",
+                   "educationTitle" : "Boek programmeren met Swift",
+                   "year" : 2015,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "Boek over programmeren met Swift"
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "ROC van Twente",
+                   "educationTitle" : "Proces Operator B",
+                   "year" : 2012,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "Vakopleiding voor Proces Operator"
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "Escape Studios",
+                   "educationTitle" : "3D Visual Effects",
+                   "year" : 2007,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "20 weken full time opleiding."
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "Grafisch Lyceum, Zwolle",
+                   "educationTitle" : "Grafisch Technicus",
+                   "year" : 1994,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "Vak opleiding voor technisch offsetdrukker"
+                                         }
+                                         ]
+                   },
+                   {
+                   "educationSchool" : "Grafisch Lyceum, Zwolle",
+                   "educationTitle" : "Grafisch Vakman",
+                   "year" : 1990,
+                   "educationDetails" : [
+                                         {
+                                         "educationDetail" : "Vak opleiding voor offsetdrukker"
+                                         }
+                                         ]
+                   }
+                   ],
+    "profile" : [
+                 {
+                 "name" : "Hans ter Horst",
+                 "jobTitle" : "iOS Developer",
+                 "profileText" : "Ik ben een enthousiaste en leergierige iOS Developer. Ik bewonder schoon en simpel design, met oog voor detail. Sinds 2015 ben ik bezig om het iOS development, met veel enthousiasme zelf aan te leren. Het is toch geweldig om ideeën te vertalen naar code, naar applicaties die er gaaf uitzien en die door anderen met veel plezier worden gebruikt. Graag wil ik werken aan projecten waarmee ik mijn kennis en vaardigheden verder kan uitbreiden."
+                 }
+                 ],
+    "appStore" : [
+                  {
+                  "title" : "Split Amount",
+                  "appURL" : "https:\/\/itunes.apple.com\/nl\/app\/split-amount\/id1170669285?mt=8",
+                  "image" : "splitAmountIcon",
+                  "description" : "Eenvoudige app om je rekening te delen met een aantal personen of een korting te berekenen."
+                  },
+                  {
+                  "title" : "CV",
+                  "appURL" : "",
+                  "image" : "cvIcon",
+                  "description" : "Mijn huidige curriculum Vitae verwerkt in een overzichtelijke app."
+                  },
+                  {
+                  "title" : "Lekker Delden",
+                  "appURL" : "",
+                  "image" : "lekkerDeldenIcon",
+                  "description" : "Momenteel bezig met een app om alle eetgelegenheden in Delden overzichtelijk te presenteren."
+                  }
+                  ]
+}
+
