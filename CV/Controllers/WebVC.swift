@@ -46,8 +46,8 @@ class WebVC: UIViewController, WKUIDelegate {
         // Setting for loading the iTunes preview site
         webView.customUserAgent = customUserAgent
 
-        
-        if let url = URL(string: appURL!) {
+        if let appurl = appURL,
+            let url = URL(string: appurl) {
             let request = URLRequest(url: url)
             webView.load(request)
             

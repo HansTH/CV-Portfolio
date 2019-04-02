@@ -14,7 +14,8 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     //MARK: - Properties
     var tableViewArray = [UITableView]()
-    let profileData = DataAPI.sharedAPI.getProfile()
+    var dataAPI = DataAPI.sharedAPI
+    var profileData: [Profile]!
     
     
     //MARK: - IBOutlets
@@ -41,7 +42,7 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
     //MARK: - Views...
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileData = dataAPI.getProfile()
         tableViewArray = [appStoreTV, skillsTV, workTV, educationTV]
         
         scrollView.layer.cornerRadius = 10
@@ -73,9 +74,9 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
             scrollView.addSubview(tableView)
             
             // Set the width
-            tableView.frame.size.width = self.view.frame.width - 32 // - 16 point from leading and trailing constraints
+            tableView.frame.size.width = UIScreen.main.bounds.width - 32 // - 16 point from leading and trailing constraints
             // Set the height
-            tableView.frame.size.height = (self.view.frame.height / 2) - 20 // - 20 point from bottom constraints
+            tableView.frame.size.height = (UIScreen.main.bounds.height / 2) - 20 // - 20 point from bottom constraints
             // Set the
             tableView.frame.origin.x = CGFloat(index) * (self.view.frame.width - 32) // - 16 point from leading and trailing constraints
             
@@ -181,7 +182,7 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
                 let item = appStoreTV.appStoreData[indexPath.row]
                 let webVC = segue.destination as! WebVC
                 webVC.titleApp = item.title
-                webVC.appURL = item.appURL!
+                webVC.appURL = item.appURL
                 
                 //Set the back button to navigate back in the navigation bar (WebVC).
                 let backItem = UIBarButtonItem()
