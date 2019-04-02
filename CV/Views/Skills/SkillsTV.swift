@@ -25,7 +25,7 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     //MARK: - Views
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         self.dataSource = self
         self.delegate = self
  
@@ -41,10 +41,12 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SkillsTVCell {
             let item = skillsData[indexPath.row]
-            let width = cell.totalView.frame.width * CGFloat(Double(item.skillLevel) / 100)
+            let width = cell.totalView.frame.width * CGFloat(Double(item.skillLevel)! / 100)
+                print("\(item.skillLevel)")
             cell.titleLabel.text = item.skillTitle
             cell.procentView.frame.size.width = width
-            cell.procentView.backgroundColor = UIColor(hexString: item.skillColor)
+                cell.procentView.backgroundColor = .red
+//            cell.procentView.backgroundColor = UIColor(hexString: item.skillColor)
             
             return cell
         }

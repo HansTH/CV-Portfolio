@@ -22,11 +22,13 @@ class SkillsTVCell: UITableViewCell {
     //MARK: - Views
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         totalView.addSubview(procentView)
-        procentView.frame.size.width = 10
+        totalView.frame.size.width = UIScreen.main.bounds.width - 64
+
+//        procentView.frame.size.width = UIScreen.main.bounds.width - 164
         procentView.frame.size.height = totalView.frame.height
         procentView.roundCorners = true
+    
     }
 
     
