@@ -11,7 +11,9 @@ import UIKit
 class AppStoreTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Properties
-    var appStoreData = DataAPI.sharedAPI.getAppStore()
+
+    let appStoreData = DataAPI.sharedAPI.getAppStore()
+    var downloadTask: URLSessionDownloadTask?
     
     
     //MARK: - IBInspectable
@@ -45,9 +47,11 @@ class AppStoreTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             let item = appStoreData[indexPath.row]
             
             cell.titleLabel.text = item.title
-            cell.iconImage.image = UIImage(named: item.image)
+//            cell.iconImage.image = UIImage(data: )
             cell.subtitle.text = item.description
-            
+                if let imageURL = URL(string: item.icon){
+                    downloadTask = cell.iconImage.loadAppImage(with: imageURL)
+                }
             return cell
         }
         
