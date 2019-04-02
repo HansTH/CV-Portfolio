@@ -8,16 +8,16 @@
 
 import Foundation
 
-class Skill: Codable {
+struct Skill: Codable {
     
-    private(set) var skillTitle: String
-    private(set) var skillLevel: Int
-    private(set) var skillColor: String
+    let skillTitle: String
+    let skillLevel: String
+//    let skillColor: String
     
-    init(skillTitle: String, skillLevel: Int, skillColor: String) {
-        self.skillTitle = skillTitle
-        self.skillLevel = skillLevel
-        self.skillColor = skillColor
+    enum CodingKeys: String, CodingKey{
+        case skillTitle = "title"
+        case skillLevel = "level"
+//        case skillColor
     }
 }
 

@@ -7,11 +7,16 @@
 //
 
 import Foundation
-
+typealias DataComplete = (Bool) -> Void
 class DataManager {
     
+    
+    
+    
     //MARK: - Properties
+    private let CV_URL = URL(string: "https://thawing-plains-14789.herokuapp.com/api/profile/all")
     private let CV_JSON = "cv.json"
+    
     private var profile = [Profile]()
     private var skill = [Skill]()
     private var appStore = [AppStore]()
@@ -21,7 +26,7 @@ class DataManager {
     
     //MARK: - DataManger methods
     init() {
-        loadChecklist()
+        getData(from: CV_URL!)
     }
     
     
@@ -45,39 +50,31 @@ class DataManager {
     func getEducation() -> [Education?] {
         return education
     }
+
     
-    
-    //MARK: - Load data methods
-    private func documentsDirectory() -> URL {
-        //return the URL user’s home directory path
-        let errorMessage = "No document directory found in application bundle."
-        guard let path = Bundle.main.url(forAuxiliaryExecutable: CV_JSON) else {fatalError(errorMessage)}
-        return path
-    }
-    
-    private func loadChecklist() {
-        
-        //create a instance of JSONDecoder
-        let decoder = JSONDecoder()
-        
-        //try to get the content of the dataFilePath, if nil do nothing
-        if let data = try? Data(contentsOf: documentsDirectory()) {
-            
-            do {
-                //try to decode the JSON data into a [Checklist] array
-                profile = try decoder.decode(CV.self, from: data).profile
-                skill = try decoder.decode(CV.self, from: data).skill
-                appStore = try decoder.decode(CV.self, from: data).appStore
-                work = try decoder.decode(CV.self, from: data).work
-                education = try decoder.decode(CV.self, from: data).education
-                
-            } //else print error
-            catch {
-                print("Error decoding data")
-            }
+    private func getData(from url: URL) {
+
+        if let data = try? Data(contentsOf: url) {
+            let decoder = JSONDecoder()
+                do {
+                    guard let skills = try decoder.decode([CV].self, from: data)[0].skill else {return}
+                    skill = skills
+                    guard let appstore = try decoder.decode([CV].self, from: data)[0].appStore else {return }
+                    appStore = appstore
+                    
+                    if let name = try decoder.decode([CV].self, from: data)[0].name,
+                    let jobtitle = try decoder.decode([CV].self, from: data)[0].jobTitle,
+                    let profiletext = try decoder.decode([CV].self, from: data)[0].profileText {
+                    let profileObjext = Profile(name: name, jobTitle: jobtitle, profileText: profiletext)
+                    self.profile.append(profileObjext)
+                    
+                    }
+                    
+                    print(skill.count)
+                }
+                catch {
+                    print("Error decoding data")
+                }
         }
     }
-    
-    
 }
-

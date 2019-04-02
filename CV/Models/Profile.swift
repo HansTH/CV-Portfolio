@@ -8,16 +8,17 @@
 
 import Foundation
 
-class Profile: Codable {
+struct Profile: Codable {
     
-    private(set) var name: String
-    private(set) var jobTitle: String
-    private(set) var profileText: String
+    let name: String?
+    let jobTitle: String?
+    let profileText: String?
     
-    init(name: String, jobTitle: String, profileText: String) {
-        self.name = name
-        self.jobTitle = jobTitle
-        self.profileText = profileText
+    enum CodingKeys: String, CodingKey {
+        case name = "fullname"
+        case jobTitle = "jobtitle"
+        case profileText = "bio"
     }
+    
 }
 

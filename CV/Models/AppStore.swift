@@ -8,17 +8,19 @@
 
 import Foundation
 
-class AppStore: Codable {
+struct AppStore: Codable {
     
-    private(set) var title: String
-    private(set) var image: String
-    private(set) var description: String
-    private(set) var appURL: String?
+    let title: String
+    let screenshots: [String]
+    let description: String
+    let appURL: String?
+    let icon: String
     
-    init(title: String, image: String, description: String, appURL: String) {
-        self.title = title
-        self.image = image
-        self.description = description
-        self.appURL = appURL
+    enum CodingKeys: String, CodingKey {
+        case title = "appTitle"
+        case screenshots = "appScreenshots"
+        case description = "appInfo"
+        case icon = "appIcon"
+        case appURL
     }
 }
