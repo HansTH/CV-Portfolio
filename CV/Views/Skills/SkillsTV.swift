@@ -12,6 +12,7 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Properties
     let skillsData = DataAPI.sharedAPI.getSkills()
+    let colorPallet = ColorPalette()
     
     
     //MARK: - IBInspectable
@@ -45,8 +46,7 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
                 print("\(item.skillLevel)")
             cell.titleLabel.text = item.skillTitle
             cell.procentView.frame.size.width = width
-                cell.procentView.backgroundColor = .red
-//            cell.procentView.backgroundColor = UIColor(hexString: item.skillColor)
+            cell.procentView.backgroundColor = colorPallet.color(title: item.skillTitle.lowercased())
             
             return cell
         }
