@@ -57,10 +57,18 @@ class DataManager {
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
                 do {
+                    
                     guard let skills = try decoder.decode([CV].self, from: data)[0].skill else {return}
                     skill = skills
+                    
                     guard let appstore = try decoder.decode([CV].self, from: data)[0].appStore else {return }
                     appStore = appstore
+                    
+                    guard let education = try decoder.decode([CV].self, from: data)[0].education else {return}
+                    self.education = education
+                    
+                    guard let experience = try decoder.decode([CV].self, from: data)[0].work else {return}
+                    work = experience
                     
                     if let name = try decoder.decode([CV].self, from: data)[0].name,
                     let jobtitle = try decoder.decode([CV].self, from: data)[0].jobTitle,
@@ -69,8 +77,6 @@ class DataManager {
                     self.profile.append(profileObjext)
                     
                     }
-                    
-                    print(skill.count)
                 }
                 catch {
                     print("Error decoding data")

@@ -39,7 +39,7 @@ class EducationDetailTVCell: UITableViewCell {
             let detailIndex = indexPath.row - parentCellIndex - 1
             
             //  Set the cell's data
-            detailLabel.text = item.educationDetails[detailIndex].educationDetail
+            detailLabel.text = item.educationInfo[detailIndex]
  
         }
     }

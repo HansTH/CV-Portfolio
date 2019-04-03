@@ -12,8 +12,8 @@ struct CV: Codable {
 //    let profile: [Profile]!
     let appStore: [AppStore]?
     let skill: [Skill]?
-//    let work: [Work]
-//    let education: [Education]
+    let work: [Work?]?
+    let education: [Education?]?
     let name: String?
     let jobTitle: String?
     let profileText: String?
@@ -25,5 +25,7 @@ struct CV: Codable {
         case profileText = "bio"
         case skill
         case appStore = "portfolio"
+        case education
+        case work = "experience"
     }
 }

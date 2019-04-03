@@ -8,27 +8,36 @@
 
 import Foundation
 
-class Education: Codable {
+struct Education: Codable {
     
-    private(set) var educationTitle: String
-    private(set) var educationSchool: String
-    private(set) var year: Int
-    private(set) var educationDetails: [EducationDetail]
-    
-    init(educationTitle: String, educationSchool: String, year: Int, educationDetails: [EducationDetail]) {
-        self.educationTitle = educationTitle
-        self.educationSchool = educationSchool
-        self.year = year
-        self.educationDetails = educationDetails
-    }
-}
-
-class EducationDetail: Codable {
-    private(set) var educationDetail: String
-    
-    init(educationDetail: String) {
-        self.educationDetail = educationDetail
+    let educationTitle: String
+    let educationSchool: String
+    let start: String
+    let end: String
+    let current: Bool
+    let educationDetails: String
+    var educationInfo: [String] {
+        return [educationDetails]
     }
     
+    enum CodingKeys: String, CodingKey {
+        case educationTitle = "eduTitle"
+        case educationSchool = "eduSchool"
+        case start = "eduStart"
+        case end = "eduEnd"
+        case current = "eduCurrent"
+        case educationDetails = "eduInfo"
+    }
+    
+    var year: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-mm-dd'T'hh:mm:sssZ"
+        formatter.locale = .current
+        if let date = formatter.date(from: start) {
+            formatter.dateStyle = .medium
+            return formatter.string(from: date)
+        } else {
+            return "Unknow"
+        }
+    }
 }
-

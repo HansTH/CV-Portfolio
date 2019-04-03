@@ -49,11 +49,11 @@ class WorkTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             
             workCell.titleLabel.text = workItem.companyName
             workCell.subTitleLabel.text = workItem.companyCity
-            workCell.yearLabel.text = String(workItem.year)
+            workCell.yearLabel.text = String(workItem.start)
             
             if workItem.companyName == (workData?.first)!?.companyName {
                 workCell.imageLabel.image = UIImage(named: "greenDotBegin")
-            } else if workItem.year == (workData?.last)!?.year {
+            } else if workItem.start == (workData?.last)!?.start {
                 workCell.imageLabel.image = UIImage(named: "greenDotEnd")
             } else {
                 workCell.imageLabel.image = UIImage(named: "greenDotMiddle")
@@ -66,7 +66,7 @@ class WorkTV: UITableView, UITableViewDataSource, UITableViewDelegate {
         // WorkDetailCell (expandCell)
         else {
             
-            if let item = workData?[getParentCellIndex(expansionIndex: indexPath.row)] {
+            if let item = workData?[getParentCellIndex(expansionIndex: indexPath.row)]?.workDetails {
                 
                 //  Create an detailCell
                 let detailCell = tableView.dequeueReusableCell(withIdentifier: "WorkDetailCell", for: indexPath) as! WorkDetailTVCell
@@ -78,9 +78,9 @@ class WorkTV: UITableView, UITableViewDataSource, UITableViewDelegate {
                 let detailIndex = indexPath.row - parentCellIndex - 1
                 
                 //  Set the cell's data
-                detailCell.titleLabel .text = item.workDetails[detailIndex].jobTitle
-                detailCell.detailLabel.text = item.workDetails[detailIndex].detail
-                detailCell.yearLabel.text = String(item.workDetails[detailIndex].year)
+                detailCell.titleLabel.text = item[detailIndex].jobTitle
+                detailCell.detailLabel.text = item[detailIndex].detail
+                detailCell.yearLabel.text = String(item[detailIndex].start)
                 
                 detailCell.selectionStyle = .none
                 

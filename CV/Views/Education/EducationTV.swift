@@ -28,7 +28,7 @@ class EducationTV: UITableView, UITableViewDataSource, UITableViewDelegate {
         
         self.dataSource = self
         self.delegate = self
-                
+        
     }
     
     
@@ -76,7 +76,7 @@ class EducationTV: UITableView, UITableViewDataSource, UITableViewDelegate {
                 let detailIndex = indexPath.row - parentCellIndex - 1
                 
                 //  Set the cell's data
-                detailCell.detailLabel.text = item.educationDetails[detailIndex].educationDetail
+                detailCell.detailLabel.text = item.educationInfo[detailIndex]
                 
                 detailCell.selectionStyle = .none
                 
@@ -107,7 +107,7 @@ class EducationTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     //  Expand EducationDetailTVCell at given index
     private func expandCell(tableView: UITableView, indexPath: Int) {
         
-        if let educationDetails = educationData?[indexPath]?.educationDetails {
+        if let educationDetails = educationData?[indexPath]?.educationInfo {
             for i in 1...educationDetails.count {
                 educationData?.insert(nil, at: indexPath + i)
                 tableView.insertRows(at: [NSIndexPath(row: indexPath + i, section: 0) as IndexPath] , with: .top)
@@ -118,7 +118,7 @@ class EducationTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     // Remove EducationDetailTVCell at given index
     private func removeCell(tableView: UITableView, indexPath: Int) {
         
-        if let educationDetails = educationData?[indexPath]?.educationDetails {
+        if let educationDetails = educationData?[indexPath]?.educationInfo {
             for _ in 1...educationDetails.count {
                 educationData?.remove(at: indexPath + 1)
                 tableView.deleteRows(at: [NSIndexPath(row: indexPath + 1, section: 0) as IndexPath] , with: .top)

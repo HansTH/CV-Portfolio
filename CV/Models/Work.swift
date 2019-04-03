@@ -8,32 +8,37 @@
 
 import Foundation
 
-class Work: Codable {
+struct Work: Codable {
     
-    private(set) var companyName: String
-    private(set) var companyCity: String
-    private(set) var year: Int
-    private(set) var workDetails: [WorkDetail]
+    let companyName: String
+    let companyCity: String
+    let jobTitle: String
+    let detail: String
+    let start: String
+    let end: String?
+    let current: Bool
+    var workDetails: [WorkDetail] {
+        return [WorkDetail(jobTitle: jobTitle, detail: detail, start: start)]
+    }
     
-    init(companyName: String ,companyCity: String, year: Int, workDetails: [WorkDetail]) {
-        self.companyName = companyName
-        self.companyCity = companyCity
-        self.year = year
-        self.workDetails = workDetails
+    enum CodingKeys: String, CodingKey {
+        
+        case jobTitle = "companyJobTitle"
+        case detail = "companyJobInfo"
+        case start = "companyStart"
+        case end = "companyEnd"
+        case current = "companyCurrent"
+        case companyName = "companyName"
+        case companyCity = "companyCity"
     }
 }
 
-class WorkDetail: Codable {
-    
-    private(set) var jobTitle: String
-    private(set) var detail: String
-    private(set) var year: Int
-    
-    init(jobTitle: String, detail: String, year: Int) {
-        self.jobTitle = jobTitle
-        self.detail = detail
-        self.year = year
-    }
+struct WorkDetail: Codable {
+
+    let jobTitle: String
+    let detail: String
+    let start: String
+
 }
 
 
