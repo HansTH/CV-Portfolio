@@ -28,8 +28,7 @@ struct Work: Codable {
         case start = "companyStart"
         case end = "companyEnd"
         case current = "companyCurrent"
-        case companyName = "companyName"
-        case companyCity = "companyCity"
+        case companyName, companyCity
     }
 }
 

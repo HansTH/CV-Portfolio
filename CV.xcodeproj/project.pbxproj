@@ -31,6 +31,7 @@
 		3A99769B1F0FA2F400159B65 /* EducationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A99769A1F0FA2F400159B65 /* EducationTVCell.swift */; };
 		3A99769D1F0FA36200159B65 /* EducationTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A99769C1F0FA36200159B65 /* EducationTV.swift */; };
 		3A99769F1F0FA3CF00159B65 /* WorkTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A99769E1F0FA3CF00159B65 /* WorkTV.swift */; };
+		3A9EB8D822552BE6002BB638 /* DateFormatter+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EB8D722552BE6002BB638 /* DateFormatter+String.swift */; };
 		3A9F227C2076D1E300922776 /* CV-Hans.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F227B2076D1E300922776 /* CV-Hans.pdf */; };
 		3AB920CC1F0F8F8E005C8475 /* AppStoreTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB920CB1F0F8F8E005C8475 /* AppStoreTV.swift */; };
 		3AB920CE1F0F97A2005C8475 /* AppStoreTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB920CD1F0F97A2005C8475 /* AppStoreTVCell.swift */; };
@@ -70,6 +71,7 @@
 		3A99769A1F0FA2F400159B65 /* EducationTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationTVCell.swift; sourceTree = "<group>"; };
 		3A99769C1F0FA36200159B65 /* EducationTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationTV.swift; sourceTree = "<group>"; };
 		3A99769E1F0FA3CF00159B65 /* WorkTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTV.swift; sourceTree = "<group>"; };
+		3A9EB8D722552BE6002BB638 /* DateFormatter+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+String.swift"; sourceTree = "<group>"; };
 		3A9F227B2076D1E300922776 /* CV-Hans.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CV-Hans.pdf"; sourceTree = "<group>"; };
 		3AB920CB1F0F8F8E005C8475 /* AppStoreTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreTV.swift; sourceTree = "<group>"; };
 		3AB920CD1F0F97A2005C8475 /* AppStoreTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreTVCell.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				3A753C33207900AA00FB5863 /* UIColor+HTMLcolor.swift */,
 				3ADF95B52253D829007D1CF7 /* UIImage+URLSessionDownloadTask.swift */,
+				3A9EB8D722552BE6002BB638 /* DateFormatter+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				3AB920CC1F0F8F8E005C8475 /* AppStoreTV.swift in Sources */,
 				3A2A036F20224FA2004F939D /* Skill.swift in Sources */,
 				3A6703442022797300087FC0 /* Education.swift in Sources */,
+				3A9EB8D822552BE6002BB638 /* DateFormatter+String.swift in Sources */,
 				3ABD2CE7202248E7003052D6 /* Profile.swift in Sources */,
 				3ABD2CEA20224916003052D6 /* DataAPI.swift in Sources */,
 				3AFEC4D51F18220E00575BC1 /* WorkDetailTVCell.swift in Sources */,
