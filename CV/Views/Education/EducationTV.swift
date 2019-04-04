@@ -49,11 +49,11 @@ class EducationTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             
             educationCell.titleLabel.text = item.educationTitle
             educationCell.subTitleLabel.text = item.educationSchool
-            educationCell.yearLabel.text = String(item.year)
+            educationCell.yearLabel.text = String(item.start.formatDate(to: "y"))
             
-            if item.educationTitle == (educationData?.first)!?.educationTitle {
+            if item.educationTitle == (educationData?.first)??.educationTitle {
                 educationCell.imageLabel.image = UIImage(named: "blueDotBegin")
-            } else if item.year == (educationData?.last)!?.year {
+            } else if item.start == (educationData?.last)??.start {
                 educationCell.imageLabel.image = UIImage(named: "blueDotEnd")
             } else {
                 educationCell.imageLabel.image = UIImage(named: "blueDotMiddle")

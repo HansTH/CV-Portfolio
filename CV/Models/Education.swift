@@ -29,15 +29,4 @@ struct Education: Codable {
         case educationDetails = "eduInfo"
     }
     
-    var year: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-mm-dd'T'hh:mm:sssZ"
-        formatter.locale = .current
-        if let date = formatter.date(from: start) {
-            formatter.dateStyle = .medium
-            return formatter.string(from: date)
-        } else {
-            return "Unknow"
-        }
-    }
 }

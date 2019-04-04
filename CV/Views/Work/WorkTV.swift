@@ -49,7 +49,7 @@ class WorkTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             
             workCell.titleLabel.text = workItem.companyName
             workCell.subTitleLabel.text = workItem.companyCity
-            workCell.yearLabel.text = String(workItem.start)
+            workCell.yearLabel.text = String(workItem.start.formatDate(to: "y"))
             
             if workItem.companyName == (workData?.first)!?.companyName {
                 workCell.imageLabel.image = UIImage(named: "greenDotBegin")
@@ -80,7 +80,7 @@ class WorkTV: UITableView, UITableViewDataSource, UITableViewDelegate {
                 //  Set the cell's data
                 detailCell.titleLabel.text = item[detailIndex].jobTitle
                 detailCell.detailLabel.text = item[detailIndex].detail
-                detailCell.yearLabel.text = String(item[detailIndex].start)
+                detailCell.yearLabel.text = "" // String(item[detailIndex].start.formatDate(to: "y"))
                 
                 detailCell.selectionStyle = .none
                 
