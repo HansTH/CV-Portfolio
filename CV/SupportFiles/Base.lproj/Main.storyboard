@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UWg-Oy-8c2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UWg-Oy-8c2">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +59,7 @@ vitae</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-5X-WvP" userLabel="emailButton" customClass="UIButtonX" customModule="CV" customModuleProvider="target">
-                                <rect key="frame" x="346" y="159" width="52" height="52"/>
+                                <rect key="frame" x="346.33333333333331" y="159" width="51.666666666666686" height="52"/>
                                 <color key="backgroundColor" red="0.15901947021484375" green="0.48824393749237061" blue="0.94978624582290649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BXK-5X-WvP" secondAttribute="height" multiplier="1:1" id="cLv-gF-5XK"/>
@@ -81,7 +77,7 @@ vitae</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txo-ct-RHP" userLabel="phoneButton" customClass="UIButtonX" customModule="CV" customModuleProvider="target">
-                                <rect key="frame" x="286.66666666666669" y="159" width="51.333333333333314" height="52"/>
+                                <rect key="frame" x="286.66666666666669" y="159" width="51.666666666666686" height="52"/>
                                 <color key="backgroundColor" red="0.44285517930000001" green="0.68839621539999996" blue="0.2654863596" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="www"/>
@@ -330,7 +326,7 @@ vitae</string>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tn-Vt-FJD" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="10" width="82" height="16"/>
+                                        <rect key="frame" x="106" y="10" width="206" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -350,7 +346,7 @@ vitae</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-Oi-0vK" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="25.999999999999996" width="198" height="46.666666666666657"/>
+                                        <rect key="frame" x="106" y="25.999999999999996" width="206" height="46.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -370,9 +366,11 @@ vitae</string>
                                     <constraint firstItem="2tn-Vt-FJD" firstAttribute="top" secondItem="Ozq-7k-HMd" secondAttribute="top" constant="10" id="8qe-eA-3Sh"/>
                                     <constraint firstItem="W0u-jg-pbz" firstAttribute="leading" secondItem="Ozq-7k-HMd" secondAttribute="leading" constant="16" id="Sum-7e-s4v"/>
                                     <constraint firstItem="LNd-Oi-0vK" firstAttribute="leading" secondItem="W0u-jg-pbz" secondAttribute="trailing" constant="8" id="YvJ-s5-Svv"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LNd-Oi-0vK" secondAttribute="bottom" constant="8" id="hOJ-TV-bxg"/>
                                     <constraint firstAttribute="bottom" secondItem="W0u-jg-pbz" secondAttribute="bottom" constant="8" id="kOL-MQ-h5C"/>
                                     <constraint firstItem="W0u-jg-pbz" firstAttribute="top" secondItem="Ozq-7k-HMd" secondAttribute="top" constant="10" id="nD0-fA-LIm"/>
-                                    <constraint firstAttribute="trailing" secondItem="LNd-Oi-0vK" secondAttribute="trailing" constant="16" id="scL-fx-5sq"/>
+                                    <constraint firstAttribute="trailing" secondItem="LNd-Oi-0vK" secondAttribute="trailing" constant="8" id="scL-fx-5sq"/>
+                                    <constraint firstAttribute="trailing" secondItem="2tn-Vt-FJD" secondAttribute="trailing" constant="8" id="vb1-Z7-d9Z"/>
                                 </constraints>
                             </tableViewCellContentView>
                             <connections>
@@ -402,7 +400,7 @@ vitae</string>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53m-p9-HSZ" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="14" width="35" height="16"/>
+                                        <rect key="frame" x="25" y="14" width="287" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -427,6 +425,7 @@ vitae</string>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="53m-p9-HSZ" secondAttribute="trailing" constant="8" id="6M7-wX-ihr"/>
                                     <constraint firstItem="7zw-LO-0kh" firstAttribute="top" secondItem="53m-p9-HSZ" secondAttribute="bottom" id="G6Q-l1-RlW"/>
                                     <constraint firstItem="7zw-LO-0kh" firstAttribute="leading" secondItem="cqq-86-iLa" secondAttribute="leading" constant="16" id="NsI-X4-VDO"/>
                                     <constraint firstAttribute="trailing" secondItem="7zw-LO-0kh" secondAttribute="trailing" constant="16" id="OY7-6x-5cE"/>
@@ -459,7 +458,7 @@ vitae</string>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cn5-hc-OI1" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="24" width="35" height="16"/>
+                                        <rect key="frame" x="102" y="24" width="265" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -472,8 +471,8 @@ vitae</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-9M-G88" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="32" width="48" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-9M-G88" customClass="UILabelX" customModule="CV" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="32" width="54" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -488,9 +487,12 @@ vitae</string>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDotMiddle" translatesAutoresizingMaskIntoConstraints="NO" id="WE8-Uo-XMc">
                                         <rect key="frame" x="70" y="0.0" width="24" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Es8-Le-8Vp"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enschede" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2b-mp-5c4" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="40" width="61" height="16"/>
+                                        <rect key="frame" x="102" y="40" width="265" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -504,7 +506,7 @@ vitae</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellOpen" translatesAutoresizingMaskIntoConstraints="NO" id="hyP-DE-pr7">
-                                        <rect key="frame" x="185" y="73" width="6" height="6"/>
+                                        <rect key="frame" x="184.33333333333334" y="72.666666666666671" width="6.3333333333333428" height="6.3333333333333286"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hyP-DE-pr7" secondAttribute="height" multiplier="1:1" id="UyR-Ac-sLZ"/>
@@ -512,19 +514,21 @@ vitae</string>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Cn5-hc-OI1" firstAttribute="leading" secondItem="WE8-Uo-XMc" secondAttribute="trailing" constant="16" id="EUV-H5-SRi"/>
+                                    <constraint firstAttribute="trailing" secondItem="a2b-mp-5c4" secondAttribute="trailing" constant="8" id="93Y-ez-Y0B"/>
+                                    <constraint firstItem="Cn5-hc-OI1" firstAttribute="leading" secondItem="WE8-Uo-XMc" secondAttribute="trailing" constant="8" id="EUV-H5-SRi"/>
                                     <constraint firstItem="hyP-DE-pr7" firstAttribute="height" secondItem="LWt-Z6-wF6" secondAttribute="height" multiplier="0.08" id="IgN-LF-NKV"/>
                                     <constraint firstItem="a2b-mp-5c4" firstAttribute="top" secondItem="Cn5-hc-OI1" secondAttribute="bottom" id="Jhf-oW-65D"/>
                                     <constraint firstAttribute="bottom" secondItem="WE8-Uo-XMc" secondAttribute="bottom" id="KuN-AJ-tRJ"/>
                                     <constraint firstItem="WE8-Uo-XMc" firstAttribute="top" secondItem="LWt-Z6-wF6" secondAttribute="top" id="MTa-01-ffa"/>
-                                    <constraint firstItem="WE8-Uo-XMc" firstAttribute="leading" secondItem="6rA-9M-G88" secondAttribute="trailing" constant="14" id="Pwb-yx-s9S"/>
+                                    <constraint firstItem="WE8-Uo-XMc" firstAttribute="leading" secondItem="6rA-9M-G88" secondAttribute="trailing" constant="8" id="Pwb-yx-s9S"/>
                                     <constraint firstItem="6rA-9M-G88" firstAttribute="leading" secondItem="LWt-Z6-wF6" secondAttribute="leading" constant="8" id="Tql-AB-SA4"/>
                                     <constraint firstItem="hyP-DE-pr7" firstAttribute="centerX" secondItem="LWt-Z6-wF6" secondAttribute="centerX" id="YLH-yA-qyn"/>
                                     <constraint firstItem="WE8-Uo-XMc" firstAttribute="leading" secondItem="LWt-Z6-wF6" secondAttribute="leading" constant="70" id="Zk4-nl-PK2"/>
                                     <constraint firstItem="6rA-9M-G88" firstAttribute="centerY" secondItem="LWt-Z6-wF6" secondAttribute="centerY" id="biC-PU-NBk"/>
                                     <constraint firstItem="Cn5-hc-OI1" firstAttribute="bottom" secondItem="LWt-Z6-wF6" secondAttribute="centerY" id="f7j-pV-F6d"/>
-                                    <constraint firstItem="a2b-mp-5c4" firstAttribute="leading" secondItem="WE8-Uo-XMc" secondAttribute="trailing" constant="16" id="q18-1D-5VK"/>
+                                    <constraint firstItem="a2b-mp-5c4" firstAttribute="leading" secondItem="WE8-Uo-XMc" secondAttribute="trailing" constant="8" id="q18-1D-5VK"/>
                                     <constraint firstAttribute="bottom" secondItem="hyP-DE-pr7" secondAttribute="bottom" constant="1" id="ttm-Fo-ilf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cn5-hc-OI1" secondAttribute="trailing" constant="8" id="vej-Oc-8XA"/>
                                 </constraints>
                             </tableViewCellContentView>
                             <connections>
@@ -543,15 +547,18 @@ vitae</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDotBetween" translatesAutoresizingMaskIntoConstraints="NO" id="Vyh-St-E6b">
                                         <rect key="frame" x="70" y="10" width="24" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="fHU-O5-LDR"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2w-xP-TWR">
-                                        <rect key="frame" x="110" y="24" width="32" height="15"/>
+                                        <rect key="frame" x="102" y="24" width="265" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-zy-jwt" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="42" width="48" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-zy-jwt" customClass="UILabelX" customModule="CV" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="42" width="54" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -565,7 +572,7 @@ vitae</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVO-s3-6WW" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="8" width="35" height="16"/>
+                                        <rect key="frame" x="102" y="8" width="265" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -582,15 +589,16 @@ vitae</string>
                                 <constraints>
                                     <constraint firstItem="y2w-xP-TWR" firstAttribute="top" secondItem="AVO-s3-6WW" secondAttribute="bottom" id="Ab8-0I-09t"/>
                                     <constraint firstItem="Jgb-zy-jwt" firstAttribute="leading" secondItem="Rr7-wd-IXs" secondAttribute="leading" constant="8" id="BAz-Lq-iBo"/>
-                                    <constraint firstItem="y2w-xP-TWR" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Rr7-wd-IXs" secondAttribute="trailing" constant="-8" id="D57-jg-hQP"/>
+                                    <constraint firstItem="y2w-xP-TWR" firstAttribute="trailing" secondItem="Rr7-wd-IXs" secondAttribute="trailing" constant="-8" id="D57-jg-hQP"/>
                                     <constraint firstItem="Jgb-zy-jwt" firstAttribute="centerY" secondItem="Rr7-wd-IXs" secondAttribute="centerY" id="Dkk-KE-9lI"/>
-                                    <constraint firstItem="y2w-xP-TWR" firstAttribute="leading" secondItem="Vyh-St-E6b" secondAttribute="trailing" constant="16" id="LwY-hK-mVX"/>
+                                    <constraint firstAttribute="trailing" secondItem="AVO-s3-6WW" secondAttribute="trailing" constant="8" id="KGU-yt-gkf"/>
+                                    <constraint firstItem="y2w-xP-TWR" firstAttribute="leading" secondItem="Vyh-St-E6b" secondAttribute="trailing" constant="8" id="LwY-hK-mVX"/>
                                     <constraint firstItem="AVO-s3-6WW" firstAttribute="top" secondItem="Rr7-wd-IXs" secondAttribute="top" constant="8" id="OKa-Rc-CpQ"/>
                                     <constraint firstItem="Vyh-St-E6b" firstAttribute="leading" secondItem="Rr7-wd-IXs" secondAttribute="leading" constant="70" id="cTl-78-BQc"/>
                                     <constraint firstItem="Vyh-St-E6b" firstAttribute="centerY" secondItem="Rr7-wd-IXs" secondAttribute="centerY" id="dpY-fS-Qt5"/>
-                                    <constraint firstItem="AVO-s3-6WW" firstAttribute="leading" secondItem="Vyh-St-E6b" secondAttribute="trailing" constant="16" id="fk0-iG-AZJ"/>
+                                    <constraint firstItem="AVO-s3-6WW" firstAttribute="leading" secondItem="Vyh-St-E6b" secondAttribute="trailing" constant="8" id="fk0-iG-AZJ"/>
                                     <constraint firstItem="y2w-xP-TWR" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Rr7-wd-IXs" secondAttribute="bottom" constant="-8" id="upv-4j-GmU"/>
-                                    <constraint firstItem="Vyh-St-E6b" firstAttribute="leading" secondItem="Jgb-zy-jwt" secondAttribute="trailing" constant="14" id="w0O-97-HnV"/>
+                                    <constraint firstItem="Vyh-St-E6b" firstAttribute="leading" secondItem="Jgb-zy-jwt" secondAttribute="trailing" constant="8" id="w0O-97-HnV"/>
                                 </constraints>
                             </tableViewCellContentView>
                             <connections>
@@ -620,7 +628,7 @@ vitae</string>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bt-y9-1zK" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="24" width="34.666666666666657" height="16"/>
+                                        <rect key="frame" x="102" y="24" width="210" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -633,8 +641,8 @@ vitae</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnC-7G-san" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="32" width="31" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="rnC-7G-san" customClass="UILabelX" customModule="CV" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="32" width="54" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -649,9 +657,12 @@ vitae</string>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueDotMiddle" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-UW-g8o">
                                         <rect key="frame" x="70" y="0.0" width="24" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="RHU-6q-rzp"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zelfstudie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLh-aA-N8P" customClass="UILabelX" customModule="CV" customModuleProvider="target">
-                                        <rect key="frame" x="110" y="40" width="63" height="16"/>
+                                        <rect key="frame" x="102" y="40" width="210" height="16"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -665,7 +676,7 @@ vitae</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellOpen" translatesAutoresizingMaskIntoConstraints="NO" id="pGs-FN-Tyg">
-                                        <rect key="frame" x="157" y="73" width="6" height="6"/>
+                                        <rect key="frame" x="156.66666666666666" y="72.666666666666671" width="6.6666666666666572" height="6.3333333333333286"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pGs-FN-Tyg" secondAttribute="height" id="0fv-si-5w6"/>
@@ -674,16 +685,19 @@ vitae</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="C0s-UW-g8o" firstAttribute="leading" secondItem="fuY-wD-NOS" secondAttribute="leading" constant="70" id="2Rk-Lo-qSt"/>
-                                    <constraint firstItem="2Bt-y9-1zK" firstAttribute="leading" secondItem="C0s-UW-g8o" secondAttribute="trailing" constant="16" id="2t3-PU-ApO"/>
-                                    <constraint firstItem="2Bt-y9-1zK" firstAttribute="leading" secondItem="C0s-UW-g8o" secondAttribute="trailing" constant="16" id="4e3-vC-Nue"/>
+                                    <constraint firstItem="2Bt-y9-1zK" firstAttribute="leading" secondItem="C0s-UW-g8o" secondAttribute="trailing" constant="8" id="2t3-PU-ApO"/>
+                                    <constraint firstItem="2Bt-y9-1zK" firstAttribute="leading" secondItem="C0s-UW-g8o" secondAttribute="trailing" constant="8" id="4e3-vC-Nue"/>
                                     <constraint firstItem="C0s-UW-g8o" firstAttribute="top" secondItem="fuY-wD-NOS" secondAttribute="top" id="57C-TQ-HeD"/>
+                                    <constraint firstAttribute="trailing" secondItem="nLh-aA-N8P" secondAttribute="trailing" constant="8" id="5T7-ul-bSJ"/>
+                                    <constraint firstItem="rnC-7G-san" firstAttribute="leading" secondItem="fuY-wD-NOS" secondAttribute="leading" constant="8" id="6f6-A1-Tuy"/>
                                     <constraint firstItem="rnC-7G-san" firstAttribute="centerY" secondItem="fuY-wD-NOS" secondAttribute="centerY" id="CsT-lX-UI5"/>
                                     <constraint firstItem="2Bt-y9-1zK" firstAttribute="bottom" secondItem="fuY-wD-NOS" secondAttribute="centerY" id="EaN-5Z-d13"/>
                                     <constraint firstAttribute="bottom" secondItem="C0s-UW-g8o" secondAttribute="bottom" id="FjG-M0-Awv"/>
                                     <constraint firstItem="pGs-FN-Tyg" firstAttribute="height" secondItem="fuY-wD-NOS" secondAttribute="height" multiplier="0.08" id="LFP-Jj-kHX"/>
                                     <constraint firstItem="pGs-FN-Tyg" firstAttribute="centerX" secondItem="fuY-wD-NOS" secondAttribute="centerX" id="Zb0-1b-h47"/>
-                                    <constraint firstItem="C0s-UW-g8o" firstAttribute="leading" secondItem="rnC-7G-san" secondAttribute="trailing" constant="16" id="fte-pK-Nr3"/>
-                                    <constraint firstItem="nLh-aA-N8P" firstAttribute="leading" secondItem="C0s-UW-g8o" secondAttribute="trailing" constant="16" id="m8T-50-z1s"/>
+                                    <constraint firstItem="C0s-UW-g8o" firstAttribute="leading" secondItem="rnC-7G-san" secondAttribute="trailing" constant="8" id="fte-pK-Nr3"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Bt-y9-1zK" secondAttribute="trailing" constant="8" id="jjm-ao-V2W"/>
+                                    <constraint firstItem="nLh-aA-N8P" firstAttribute="leading" secondItem="C0s-UW-g8o" secondAttribute="trailing" constant="8" id="m8T-50-z1s"/>
                                     <constraint firstAttribute="bottom" secondItem="pGs-FN-Tyg" secondAttribute="bottom" constant="1" id="mfE-PD-uz2"/>
                                     <constraint firstItem="nLh-aA-N8P" firstAttribute="top" secondItem="2Bt-y9-1zK" secondAttribute="bottom" id="o34-FA-hqV"/>
                                     <constraint firstItem="nLh-aA-N8P" firstAttribute="top" secondItem="2Bt-y9-1zK" secondAttribute="bottom" id="rY7-yn-UX1"/>
@@ -703,20 +717,24 @@ vitae</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueDotBetween" translatesAutoresizingMaskIntoConstraints="NO" id="eA7-Ij-JfQ">
-                                        <rect key="frame" x="70" y="0.0" width="24" height="80"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="WLw-Yi-GNQ">
-                                        <rect key="frame" x="110" y="8" width="194" height="64"/>
+                                        <rect key="frame" x="102" y="8" width="202" height="64"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueDotBetween" translatesAutoresizingMaskIntoConstraints="NO" id="eA7-Ij-JfQ">
+                                        <rect key="frame" x="70" y="0.0" width="24" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Pn1-Gw-xzM"/>
+                                            <constraint firstAttribute="width" constant="24" id="YGV-GC-3dc"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="WLw-Yi-GNQ" secondAttribute="bottom" constant="8" id="7c0-A6-vwr"/>
                                     <constraint firstItem="eA7-Ij-JfQ" firstAttribute="leading" secondItem="2BT-gv-Qx7" secondAttribute="leading" constant="70" id="AiD-TV-AyE"/>
-                                    <constraint firstItem="WLw-Yi-GNQ" firstAttribute="leading" secondItem="2BT-gv-Qx7" secondAttribute="leading" constant="110" id="EpG-jw-4Tu"/>
+                                    <constraint firstItem="WLw-Yi-GNQ" firstAttribute="leading" secondItem="eA7-Ij-JfQ" secondAttribute="trailing" constant="8" id="EpG-jw-4Tu"/>
                                     <constraint firstItem="eA7-Ij-JfQ" firstAttribute="top" secondItem="2BT-gv-Qx7" secondAttribute="top" id="H6k-Eh-VYw"/>
                                     <constraint firstItem="WLw-Yi-GNQ" firstAttribute="top" secondItem="2BT-gv-Qx7" secondAttribute="top" constant="8" id="auY-b7-dMJ"/>
                                     <constraint firstAttribute="trailing" secondItem="WLw-Yi-GNQ" secondAttribute="trailing" constant="16" id="fWL-nK-ZSv"/>
