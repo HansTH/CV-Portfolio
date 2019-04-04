@@ -12,7 +12,6 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Properties
     let skillsData = DataAPI.sharedAPI.getSkills()
-    let colorPallet = ColorPalette()
     
     
     //MARK: - IBInspectable
@@ -21,17 +20,17 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             self.layer.cornerRadius = cornerRadius
         }
     }
-
+    
     
     //MARK: - Views
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         self.dataSource = self
         self.delegate = self
- 
+        
     }
-
+    
     
     //MARK: - Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,14 +38,11 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SkillsTVCell {
             
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SkillsTVCell {
             let item = skillsData[indexPath.row]
-            let width = cell.totalView.frame.width * CGFloat(Double(item.skillLevel)! / 100)
-                print("\(item.skillLevel)")
-            cell.titleLabel.text = item.skillTitle
-            cell.procentView.frame.size.width = width
-            cell.procentView.backgroundColor = colorPallet.color(title: item.skillTitle.lowercased())
+            cell.configureCell(item: item)
             
             return cell
         }

@@ -12,7 +12,8 @@ class SkillsTVCell: UITableViewCell {
 
     //MARK: - Properties
     var procentView =  UIViewX()
-    
+    let colorPallet = ColorPalette()
+
     
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -25,11 +26,17 @@ class SkillsTVCell: UITableViewCell {
         totalView.addSubview(procentView)
         totalView.frame.size.width = UIScreen.main.bounds.width - 64
 
-//        procentView.frame.size.width = UIScreen.main.bounds.width - 164
         procentView.frame.size.height = totalView.frame.height
         procentView.roundCorners = true
     
     }
 
+    func configureCell(item: Skill) {
+        let width = totalView.frame.width * CGFloat(Double(item.skillLevel)! / 100)
+        
+        titleLabel.text = item.skillTitle
+        procentView.frame.size.width = width
+        procentView.backgroundColor = colorPallet.color(title: item.skillTitle.lowercased())
+    }
     
 }
