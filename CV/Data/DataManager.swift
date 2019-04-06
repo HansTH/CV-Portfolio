@@ -50,13 +50,23 @@ class DataManager {
     func getEducation() -> [Education?] {
         return education
     }
-
+    
     
     private func getData(from url: URL) {
-
+        
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
-                do {
+            do {
+                
+                if let name = try decoder.decode([CV].self, from: data)[0].name,
+                    let jobtitle = try decoder.decode([CV].self, from: data)[0].jobTitle,
+                    let profiletext = try decoder.decode([CV].self, from: data)[0].profileText,
+                    let website = try decoder.decode([CV].self, from: data)[0].website,
+                    let email = try decoder.decode([CV].self, from: data)[0].email,
+                    let mobile = try decoder.decode([CV].self, from: data)[0].mobile {
+                    let profileObjext = Profile(name: name, jobTitle: jobtitle, profileText: profiletext,
+                                                website: website, mobile: mobile, email: email)
+                    self.profile.append(profileObjext)
                     
                     guard let skills = try decoder.decode([CV].self, from: data)[0].skill else {return}
                     skill = skills
@@ -70,17 +80,11 @@ class DataManager {
                     guard let experience = try decoder.decode([CV].self, from: data)[0].work else {return}
                     work = experience
                     
-                    if let name = try decoder.decode([CV].self, from: data)[0].name,
-                    let jobtitle = try decoder.decode([CV].self, from: data)[0].jobTitle,
-                    let profiletext = try decoder.decode([CV].self, from: data)[0].profileText {
-                    let profileObjext = Profile(name: name, jobTitle: jobtitle, profileText: profiletext)
-                    self.profile.append(profileObjext)
-                    
-                    }
                 }
-                catch {
-                    print("Error decoding data")
-                }
+            }
+            catch {
+                print("Error decoding data")
+            }
         }
     }
 }
