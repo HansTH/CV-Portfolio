@@ -18,6 +18,7 @@
 		3A193A9A1F110A49006F695A /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A193A961F110A49006F695A /* UILabelX.swift */; };
 		3A2A036F20224FA2004F939D /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2A036E20224FA2004F939D /* Skill.swift */; };
 		3A2A037120225048004F939D /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2A037020225048004F939D /* ColorPalette.swift */; };
+		3A2C0D302255FBA4005A96C7 /* AppDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C0D2F2255FBA4005A96C7 /* AppDetailVC.swift */; };
 		3A3E5D001F138DEC00BE9642 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E5CFF1F138DEC00BE9642 /* AppStore.swift */; };
 		3A64D72F207A962D00F55EF5 /* cv.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A64D72E207A962C00F55EF5 /* cv.json */; };
 		3A6703442022797300087FC0 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6703432022797300087FC0 /* Education.swift */; };
@@ -58,6 +59,7 @@
 		3A193A961F110A49006F695A /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
 		3A2A036E20224FA2004F939D /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		3A2A037020225048004F939D /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		3A2C0D2F2255FBA4005A96C7 /* AppDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVC.swift; sourceTree = "<group>"; };
 		3A3E5CFF1F138DEC00BE9642 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		3A64D72E207A962C00F55EF5 /* cv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cv.json; sourceTree = "<group>"; };
 		3A6703432022797300087FC0 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				3A06CFCA1F0E751C00EF1B0F /* AppDelegate.swift */,
 				3A06CFE01F0E91A600EF1B0F /* MainVC.swift */,
 				3A79870A1F16B052006F75E7 /* WebVC.swift */,
+				3A2C0D2F2255FBA4005A96C7 /* AppDetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -350,6 +354,7 @@
 				3A06CFCB1F0E751C00EF1B0F /* AppDelegate.swift in Sources */,
 				3A2A037120225048004F939D /* ColorPalette.swift in Sources */,
 				3A9976971F0FA08C00159B65 /* SkillsTVCell.swift in Sources */,
+				3A2C0D302255FBA4005A96C7 /* AppDetailVC.swift in Sources */,
 				3A9976951F0FA01E00159B65 /* SkillsTV.swift in Sources */,
 				3ABD2CEC20224941003052D6 /* DataManager.swift in Sources */,
 				3A79870B1F16B052006F75E7 /* WebVC.swift in Sources */,

@@ -11,8 +11,10 @@ import UIKit
 class AppStoreTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Properties
-    let appStoreData = DataAPI.sharedAPI.getAppStore()
 
+    let appStoreData = DataAPI.sharedAPI.getAppStore()
+    var downloadTask: URLSessionDownloadTask?
+    
     
     //MARK: - IBInspectable
     @IBInspectable var cornerRadius: CGFloat = 0 {
@@ -20,7 +22,7 @@ class AppStoreTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             self.layer.cornerRadius = cornerRadius
         }
     }
-
+    
     
     //MARK: - Views
     override func awakeFromNib() {
@@ -29,10 +31,10 @@ class AppStoreTV: UITableView, UITableViewDataSource, UITableViewDelegate {
         //Tableview Delegates
         self.dataSource = self
         self.delegate = self
-    
+        
     }
     
-    
+
     //MARK: - Methodes
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,21 +42,19 @@ class AppStoreTV: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AppStoreTVCell {
-            
+  
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AppStoreTVCell {
             let item = appStoreData[indexPath.row]
-            cell.configuteCell(item: item)
             
+            cell.titleLabel.text = item.title
+//            cell.iconImage.image = UIImage(data: )
+            cell.subtitle.text = item.description
+                if let imageURL = URL(string: item.icon){
+                    downloadTask = cell.iconImage.loadAppImage(with: imageURL)
+                }
             return cell
         }
+        
         return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        print(indexPath.row)
     }
 }
