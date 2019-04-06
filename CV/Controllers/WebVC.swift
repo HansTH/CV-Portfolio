@@ -27,6 +27,8 @@ class WebVC: UIViewController, WKUIDelegate {
         
         // Show the navigation bar
         navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         // Set the title of the app in the navigation bar
         if let appTitle = titleApp {
             navigationItem.title = appTitle

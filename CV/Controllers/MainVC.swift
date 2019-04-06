@@ -16,6 +16,7 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
     var tableViewArray = [UITableView]()
     var dataAPI = DataAPI.sharedAPI
     var profileData: [Profile]!
+    @IBAction func unwindToMainVC(segue: UIStoryboardSegue){}
     
     
     //MARK: - IBOutlets
@@ -177,12 +178,11 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
     //MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toWebVC" {
+        if segue.identifier == "toAppDetailVC" {
             if let indexPath = appStoreTV.indexPathForSelectedRow {
                 let item = appStoreTV.appStoreData[indexPath.row]
-                let webVC = segue.destination as! WebVC
-                webVC.titleApp = item.title
-                webVC.appURL = item.appURL
+                let appDetailVC = segue.destination as! AppDetailVC
+                appDetailVC.appDetailItem = item
                 
                 //Set the back button to navigate back in the navigation bar (WebVC).
                 let backItem = UIBarButtonItem()
