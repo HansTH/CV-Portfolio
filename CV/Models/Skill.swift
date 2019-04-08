@@ -12,12 +12,10 @@ struct Skill: Codable {
     
     let skillTitle: String
     let skillLevel: String
-//    let skillColor: String
     
     enum CodingKeys: String, CodingKey{
         case skillTitle = "title"
         case skillLevel = "level"
-//        case skillColor
     }
 }
 

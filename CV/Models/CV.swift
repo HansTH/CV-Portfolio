@@ -9,7 +9,7 @@
 import Foundation
 
 struct CV: Codable {
-//    let profile: [Profile]!
+
     let appStore: [AppStore]?
     let skill: [Skill]?
     let work: [Work?]?

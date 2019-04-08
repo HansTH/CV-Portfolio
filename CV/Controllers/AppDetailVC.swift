@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppDetailVC: UIViewController {
+class AppDetailVC: UIViewController, UIScrollViewDelegate {
 
     var appDetailItem: AppStore!
     var downloadTask = URLSessionDownloadTask()
@@ -26,22 +26,30 @@ class AppDetailVC: UIViewController {
     @IBOutlet weak var appCategoryLabel: UILabel!
     @IBOutlet weak var appSkillLabel: UILabel!
     @IBOutlet weak var appStoreButton: UIButton!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.delegate = self
+        pageControl.numberOfPages = appDetailItem.screenshots.count
+        pageControl.currentPage = 0
+        
         let imageString = appDetailItem.icon
         if let imageURL = URL(string: imageString){
             downloadTask = iconImageView.loadAppImage(with: imageURL)
+            iconImageView.layer.cornerRadius = 16
+            iconImageView.clipsToBounds = true
         }
-        iconImageView.layer.cornerRadius = 16
-        iconImageView.clipsToBounds = true
+        
+        
         appTitleLabel.text = appDetailItem.title
         appInfoTextView.text = appDetailItem.description
-        setupScrollView(screenshots: appDetailItem.screenshots)
+        
         appYearLabel.text = appDetailItem.year
         appCategoryLabel.text = appDetailItem.category
         appSkillLabel.text = appDetailItem.skills.joined(separator: "  • ")
+        
         if let _ = appDetailItem.appStoreURL {
             appStoreButton.isHidden = false
             appStoreButton.layer.cornerRadius = appStoreButton.frame.height / 2
@@ -49,6 +57,8 @@ class AppDetailVC: UIViewController {
         } else {
             appStoreButton.isHidden = true
         }
+        
+        setupScrollView(screenshots: appDetailItem.screenshots)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +68,7 @@ class AppDetailVC: UIViewController {
     
     func setupScrollView(screenshots: [String]) {
         
-        scrollView.contentSize = CGSize(width: uiScreenWidth * CGFloat(screenshots.count), height: (uiScreenWidth * 9 / 16) - 40)
+        scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(screenshots.count), height: (scrollView.frame.height))
         scrollView.isPagingEnabled = screenshots.count > 1 ? true : false
         scrollView.isScrollEnabled = screenshots.count > 1 ? true : false
         scrollView.layer.cornerRadius = 10
@@ -82,7 +92,7 @@ class AppDetailVC: UIViewController {
             imageView.frame.size.height = scrollView.frame.height //((uiScreenWidth * 9 / 16))
             
             // Set the origin
-            imageView.frame.origin.x = CGFloat(i) * (uiScreenWidth - 40) // - 20 point from leading and trailing constraints
+            imageView.frame.origin.x = CGFloat(i) * (shadowScrollView.frame.width) // - 20 point from leading and trailing constraints
         }
 
     }
@@ -106,12 +116,17 @@ class AppDetailVC: UIViewController {
         if segue.identifier == "toWebsite" {
             let webVC = segue.destination as! WebVC
             webVC.titleApp = "HansTH"
-            webVC.appURL = appDetailItem.website
+            webVC.appURL = "https://thawing-plains-14789.herokuapp.com"
             
             //Set the back button to navigate back in the navigation bar (WebVC).
             let backItem = UIBarButtonItem()
             backItem.title = ""
             navigationItem.backBarButtonItem = backItem
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x / scrollView.frame.width)
+        pageControl.currentPage = Int(pageIndex)
     }
 }

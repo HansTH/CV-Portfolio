@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UWg-Oy-8c2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UWg-Oy-8c2">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,7 +91,7 @@ vitae</string>
                                     <action selector="website:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8k-Xv-DGB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-TF-L7T" customClass="UILabelX" customModule="CV" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-TF-L7T" customClass="UILabelX" customModule="CV" customModuleProvider="target">
                                 <rect key="frame" x="107.99999999999999" y="193" width="178.66666666666663" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" red="0.44285517930984497" green="0.68839621543884277" blue="0.26548635959625244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,7 +201,7 @@ vitae</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dW-KR-Cbw" customClass="ShadowView" customModule="CV" customModuleProvider="target">
                                 <rect key="frame" x="16" y="336" width="382" height="316"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoF-tu-nNI">
+                                    <scrollView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoF-tu-nNI">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="316"/>
                                     </scrollView>
                                 </subviews>
@@ -960,6 +960,7 @@ vitae</string>
                         <outlet property="appTitleLabel" destination="K7L-LR-SQW" id="lAh-ww-oAk"/>
                         <outlet property="appYearLabel" destination="7y2-Pg-aXZ" id="biT-zI-ZN5"/>
                         <outlet property="iconImageView" destination="HFP-nn-mVJ" id="43y-aQ-P38"/>
+                        <outlet property="pageControl" destination="vwQ-XB-t42" id="Mfg-Cq-mCA"/>
                         <outlet property="scrollView" destination="YMp-re-n2M" id="Xpy-MN-7RD"/>
                         <outlet property="shadowScrollView" destination="ywS-3V-ydP" id="0sg-rS-VXt"/>
                     </connections>

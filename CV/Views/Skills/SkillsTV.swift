@@ -21,14 +21,13 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    
+
     //MARK: - Views
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.dataSource = self
         self.delegate = self
-        
     }
     
     
@@ -43,7 +42,6 @@ class SkillsTV: UITableView, UITableViewDataSource, UITableViewDelegate {
             
             let item = skillsData[indexPath.row]
             cell.configureCell(item: item)
-            
             return cell
         }
         

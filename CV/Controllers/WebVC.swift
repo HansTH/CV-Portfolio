@@ -15,7 +15,7 @@ class WebVC: UIViewController, WKUIDelegate {
     var titleApp: String?
     var appURL: String?
     // If the app is not in the Appstore, show all my apps in the store
-    let defaultURL = "https://itunes.apple.com/nl/developer/hans-ter-horst/id1170669284"
+    let defaultURL = "https://thawing-plains-14789.herokuapp.com"
     
     // Setting for loading the iTunes preview site
     let customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36"

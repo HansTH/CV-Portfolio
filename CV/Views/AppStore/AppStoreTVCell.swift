@@ -18,7 +18,7 @@ class AppStoreTVCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        iconImage.layer.cornerRadius = 20
+        iconImage.layer.cornerRadius = 16
         iconImage.clipsToBounds = true
     }
 

@@ -73,7 +73,7 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
         // Add the tableViews to the scrollView
         for (index, tableView) in tableViewArray.enumerated() {
             scrollView.addSubview(tableView)
-            
+        
             // Set the width
             tableView.frame.size.width = UIScreen.main.bounds.width - 32 // - 16 point from leading and trailing constraints
             // Set the height
@@ -124,7 +124,7 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     // Phone call
     @IBAction func website(_ sender: UIButton) {
-        if let websiteUrl = URL(string: "https://www.hansth.nl"){
+        if let websiteUrl = URL(string: "https://thawing-plains-14789.herokuapp.com"){
             //URL(string: "tel://" + "+31611902568")
             UIApplication.shared.open(websiteUrl)
         }
