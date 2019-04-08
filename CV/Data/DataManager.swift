@@ -10,9 +10,6 @@ import Foundation
 typealias DataComplete = (Bool) -> Void
 class DataManager {
     
-    
-    
-    
     //MARK: - Properties
     private let CV_URL = URL(string: "https://thawing-plains-14789.herokuapp.com/api/profile/all")
     private let CV_JSON = "cv.json"
@@ -44,11 +41,11 @@ class DataManager {
     }
     
     func getWork() -> [Work?] {
-        return work
+        return work.sorted(by: { $0!.start > $1!.start})
     }
     
     func getEducation() -> [Education?] {
-        return education
+        return education.sorted(by: { $0!.start > $1!.start})
     }
     
     
