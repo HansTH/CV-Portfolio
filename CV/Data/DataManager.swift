@@ -11,7 +11,7 @@ typealias DataComplete = (Bool) -> Void
 class DataManager {
     
     //MARK: - Properties
-    private let CV_URL = URL(string: "https://thawing-plains-14789.herokuapp.com/api/profile/all")
+    private let CV_URL = URL(string: "https://www.hansterhorst.com/api/profile/all")
     private let CV_JSON = "cv.json"
     
     private var profile = [Profile]()

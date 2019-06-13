@@ -809,7 +809,7 @@ vitae</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1J-Yc-Q7e">
                                 <rect key="frame" x="126" y="537" width="268" height="30"/>
-                                <state key="normal" title="www.hansth.nl">
+                                <state key="normal" title="https://www.hansterhorst.com">
                                     <color key="titleColor" red="0.012906579300761223" green="0.48451465368270874" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -963,6 +963,7 @@ vitae</string>
                         <outlet property="pageControl" destination="vwQ-XB-t42" id="Mfg-Cq-mCA"/>
                         <outlet property="scrollView" destination="YMp-re-n2M" id="Xpy-MN-7RD"/>
                         <outlet property="shadowScrollView" destination="ywS-3V-ydP" id="0sg-rS-VXt"/>
+                        <outlet property="websiteLabel" destination="q1J-Yc-Q7e" id="Rfw-Rx-fD9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyb-cv-FiI" userLabel="First Responder" sceneMemberID="firstResponder"/>

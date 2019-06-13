@@ -14,6 +14,7 @@ class AppDetailVC: UIViewController, UIScrollViewDelegate {
     var downloadTask = URLSessionDownloadTask()
     let uiScreenWidth = UIScreen.main.bounds.width
     let uiScreenHeight = UIScreen.main.bounds.height
+    var websiteUrl: String!
     
     
     //    MARK: - IBOutlets
@@ -27,6 +28,7 @@ class AppDetailVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var appSkillLabel: UILabel!
     @IBOutlet weak var appStoreButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var websiteLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class AppDetailVC: UIViewController, UIScrollViewDelegate {
             iconImageView.clipsToBounds = true
         }
         
+        websiteUrl = appDetailItem.title.hasPrefix("www") ? "https:\(appDetailItem.title)" : "https://www.hansterhorst.com"
         
         appTitleLabel.text = appDetailItem.title
         appInfoTextView.text = appDetailItem.description
@@ -49,6 +52,8 @@ class AppDetailVC: UIViewController, UIScrollViewDelegate {
         appYearLabel.text = appDetailItem.year
         appCategoryLabel.text = appDetailItem.category
         appSkillLabel.text = appDetailItem.skills.joined(separator: "  • ")
+        
+        websiteLabel.setTitle(websiteUrl, for: .normal)
         
         if let _ = appDetailItem.appStoreURL {
             appStoreButton.isHidden = false
@@ -106,7 +111,7 @@ class AppDetailVC: UIViewController, UIScrollViewDelegate {
                 let webVC = segue.destination as! WebVC
                 webVC.titleApp = appDetailItem.title
                 webVC.appURL = appDetailItem.appStoreURL
-                
+                webVC.webView.allowsBackForwardNavigationGestures = false
                 //Set the back button to navigate back in the navigation bar (WebVC).
                 let backItem = UIBarButtonItem()
                 backItem.title = ""
@@ -114,9 +119,10 @@ class AppDetailVC: UIViewController, UIScrollViewDelegate {
         }
         
         if segue.identifier == "toWebsite" {
+            
             let webVC = segue.destination as! WebVC
-            webVC.titleApp = "HansTH"
-            webVC.appURL = "https://thawing-plains-14789.herokuapp.com"
+            webVC.titleApp = appDetailItem.title
+            webVC.appURL = websiteUrl
             
             //Set the back button to navigate back in the navigation bar (WebVC).
             let backItem = UIBarButtonItem()

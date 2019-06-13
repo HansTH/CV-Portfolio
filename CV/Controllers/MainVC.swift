@@ -124,7 +124,7 @@ class MainVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     // Phone call
     @IBAction func website(_ sender: UIButton) {
-        if let websiteUrl = URL(string: "https://thawing-plains-14789.herokuapp.com"){
+        if let websiteUrl = URL(string: "https://www.hansterhorst.com"){
             //URL(string: "tel://" + "+31611902568")
             UIApplication.shared.open(websiteUrl)
         }
